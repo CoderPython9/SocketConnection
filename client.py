@@ -7,3 +7,7 @@ class Sock(object):
 		
 	def send(self, message):
 		self._client.sendall(message)
+	def recv(self):
+		return str(self._client.recv(1024), 'utf-8')
+	
+	
