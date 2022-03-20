@@ -11,5 +11,3 @@ class Sock(object):
 		self._conn.sendall(message)
 	def receive(self):
 		return str(self._conn.recv(1024), 'utf8')
-	def disconnect(self):
-		self._conn.close()
