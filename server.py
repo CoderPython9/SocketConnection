@@ -8,7 +8,7 @@ class Sock(object):
 		self._conn = conn
 		self.addr = addr
 	def send(self, message):
-		self._conn.send(message)
+		self._conn.sendall(message)
 	def receive(self):
 		return str(self._conn.recv(1024), 'utf8')
 	def disconnect(self):
